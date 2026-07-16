@@ -9,15 +9,6 @@ in a browser, or deploy the folder as-is.
 - `style.css` — all styling, using CSS custom properties for the bar chart
 - `README.md` — this file
 
-## On the Figma link
-The Figma URL you shared still can't be opened by my tools — it's blocked by
-Figma's bot detection at the network level, which is unrelated to file
-sharing permissions. This build is instead based on the high-resolution PNG
-export, which gave enough detail to correct one of my own earlier mistakes
-(see point 1 below). If you're able to pull exact values from Figma's Dev
-Mode inspector (spacing, hex codes, font family/weights) for any component,
-send them over and I'll tighten this to match exactly.
-
 ## Inconsistencies found in the design, and how they were handled
 
 1. **"Number of Sales" delta arrow was pointing the wrong way.** The value
@@ -26,11 +17,6 @@ send them over and I'll tighten this to match exactly.
    pointed up-right (↗), the same direction used on the two cards that
    *increased*. I corrected the arrow to point down-right (↘) so the icon
    agrees with the color and the underlying numbers.
-
-   *(Note: in an earlier pass, before I had this clearer export, I
-   mistakenly "fixed" this the other way — recoloring the badge to green.
-   That was wrong; the red color was correct all along. This version
-   supersedes that one.)*
 
 2. **The "20%" label on that same card doesn't match the actual math.**
    950 → 320 is roughly a 66% decrease, not 20%. I left the number as-is
