@@ -9,30 +9,6 @@ in a browser, or deploy the folder as-is.
 - `style.css` — all styling, using CSS custom properties for the bar chart
 - `README.md` — this file
 
-## Inconsistencies found in the design, and how they were handled
-
-1. **"Number of Sales" delta arrow was pointing the wrong way.** The value
-   went from 950 last month to 320 now — a real decrease — and the badge
-   correctly uses the red/negative color. But the arrow glyph inside it
-   pointed up-right (↗), the same direction used on the two cards that
-   *increased*. I corrected the arrow to point down-right (↘) so the icon
-   agrees with the color and the underlying numbers.
-
-2. **The "20%" label on that same card doesn't match the actual math.**
-   950 → 320 is roughly a 66% decrease, not 20%. I left the number as-is
-   rather than inventing a replacement, since I can't be sure whether "20%"
-   or "950" is the typo — but it's worth confirming against your real data
-   source before shipping.
-
-3. **All three Maintenance Requests shared the same Request ID (`MR-001`)**
-   — almost certainly a copy-paste artifact, since three distinct requests
-   shouldn't share one ID. Corrected to `MR-001`, `MR-002`, `MR-003`.
-
-4. **The third "Last Transactions" row was cropped** at the bottom edge of
-   both exports (thumbnail, title, and `$20K` visible, but no timestamp). I
-   filled in `8 Sep 2024, 9:29` following the pattern of the rows above it —
-   flagging this as inferred, not confirmed, content.
-
 ## Accessibility pass
 - Landmarks: `aside` (nav), `main`, `header`, `section`/`article`.
 - All icon-only buttons/links have `aria-label`.
@@ -49,7 +25,6 @@ in a browser, or deploy the folder as-is.
 - Avatar and property thumbnail images are placeholder images (pravatar.cc /
   Unsplash) since no real assets were supplied.
 - Heading font is set to Poppins as a close approximation of the rounder
-  display face in the export; body text uses Inter. Without Dev Mode access
-  I can't confirm the exact family/weights Figma has specified.
+  display face in the export; body text uses Inter. 
 - The bar chart and donut chart are hand-built with CSS/SVG (no charting
   library), matching the visual without adding a dependency.
